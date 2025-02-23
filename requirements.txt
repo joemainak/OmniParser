@@ -1,30 +1,25 @@
 # Core ML/Inference
-torch==2.3.0  # Latest stable as of Feb 2025; adjust if needed
-torchvision==0.18.0  # Matches torch version
-ultralytics==8.3.70  # For YOLO-based icon detection (OmniParser’s core)
+torch==2.3.0  # CPU-only by default with buildpack; ~500 MB
+torchvision==0.18.0  # Matches torch
+ultralytics==8.3.70  # YOLO for icon detection
 transformers==4.44.0  # For captioning models (e.g., Florence)
 
 # Image Processing
-opencv-python-headless==4.10.0  # Lighter than opencv-python, no GUI deps
-numpy==1.26.4  # Math and array operations
+opencv-python-headless==4.10.0  # Lighter than full opencv
+numpy==1.26.4  # Essential for arrays
 
 # Web UI
 gradio==4.44.0  # For gradio_demo.py
 
-# Model Weight Downloading (if fetching from Hugging Face)
-huggingface-hub==0.25.0  # To download weights at runtime
+# Weight Downloading
+huggingface-hub==0.25.0  # Fetch weights from Hugging Face at runtime
 
-# Optional: If using Spaces for weights
-boto3==1.35.0  # For DigitalOcean Spaces access
+# Optional: For Spaces (if weights > 2 GiB)
+# boto3==1.35.0  # Uncomment if using Spaces
 
-# Utilities for OmniParser (from README examples)
-supervision==0.18.0  # For vision tasks
-timm==1.0.9  # For image models
-einops==0.8.0  # For tensor operations
-dill==0.3.8  # Serialization (used in some ML workflows)
-accelerate==0.34.0  # For efficient model loading
-
-# Optional AI API Client (choose one if needed)
-openai==1.3.5  # If integrating OpenAI models
-# Uncomment if using Anthropic instead:
-# anthropic==0.37.1
+# Utilities (from OmniParser README/demo.ipynb)
+supervision==0.18.0  # Vision tasks
+timm==1.0.9  # Image models
+einops==0.8.0  # Tensor ops
+dill==0.3.8  # Serialization
+accelerate==0.34.0  # Efficient model loading

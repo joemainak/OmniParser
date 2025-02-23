@@ -1,1 +1,1 @@
-web: pip install --no-cache-dir -r requirements.txt && python gradio_demo.py
+web: python gradio_demo.py
