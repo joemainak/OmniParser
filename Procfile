@@ -1,1 +1,0 @@
-web: python gradio_demo.py
