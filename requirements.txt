@@ -1,25 +1,13 @@
-# Core ML/Inference
-torch==2.3.0  # CPU-only by default with buildpack; ~500 MB
-torchvision==0.18.0  # Matches torch
-ultralytics==8.3.70  # YOLO for icon detection
-transformers==4.44.0  # For captioning models (e.g., Florence)
-
-# Image Processing
-opencv-python-headless==4.10.0  # Lighter than full opencv
-numpy==1.26.4  # Essential for arrays
-
-# Web UI
-gradio==4.44.0  # For gradio_demo.py
-
-# Weight Downloading
-huggingface-hub==0.25.0  # Fetch weights from Hugging Face at runtime
-
-# Optional: For Spaces (if weights > 2 GiB)
-# boto3==1.35.0  # Uncomment if using Spaces
-
-# Utilities (from OmniParser README/demo.ipynb)
-supervision==0.18.0  # Vision tasks
-timm==1.0.9  # Image models
-einops==0.8.0  # Tensor ops
-dill==0.3.8  # Serialization
-accelerate==0.34.0  # Efficient model loading
+torch==2.3.0
+torchvision==0.18.0
+ultralytics==8.3.7
+transformers==4.44.0
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+gradio==4.44.0
+huggingface-hub==0.25.0
+supervision==0.18.0
+timm==1.0.9
+einops==0.8.0
+dill==0.3.8
+accelerate==0.34.2
